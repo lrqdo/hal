@@ -158,7 +158,7 @@ class HalJsonRenderer implements HalRenderer
             if (count($embedded) === 1 && !in_array($rel, $resource->getArrayResourceRels())) {
                 $embedded = $embedded[0];
             }
-            $data['_embedded'][$rel] = $embedded;
+            $data[$rel] = $embedded;
         }
 
         return $data;
